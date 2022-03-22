@@ -34,7 +34,7 @@ class FarmersMapView(MapView):
     def add_market(self, market):
         # Create the MarketMarker
         lat, lon = market[21], market[20]
-        marker = MapMarkerPopup(lat=lat, lon=lon, )
+        marker = MarketMarker(lat=lat, lon=lon, source = 'marker.png')
         print(marker.source)
         # Add the MarketMarker to the map
         self.add_widget(marker)
