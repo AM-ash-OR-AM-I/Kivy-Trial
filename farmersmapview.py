@@ -1,4 +1,4 @@
-from kivy_garden.mapview import MapView
+from kivy_garden.mapview import MapView, MapMarkerPopup
 from kivy.clock import Clock
 from kivy.app import App
 from marketmarker import MarketMarker
@@ -34,9 +34,10 @@ class FarmersMapView(MapView):
     def add_market(self, market):
         # Create the MarketMarker
         lat, lon = market[21], market[20]
-        marker = MarketMarker(lat=lat, lon=lon)
+        marker = MapMarkerPopup(lat=lat, lon=lon, )
+        print(marker.source)
         # Add the MarketMarker to the map
-        self.add_marker(marker)
+        self.add_widget(marker)
         # Keep track of the marker's name
         name = market[1]
         self.market_names.append(name)
