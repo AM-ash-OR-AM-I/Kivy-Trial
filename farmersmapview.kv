@@ -1,5 +1,6 @@
 #:import Mapview kivy_garden.mapview.MapView
-
+#:import GpsBlinker gpsblinker.GpsBlinker
+#:include gpsblinker.kv
 <FarmersMapView>
     lat: 33.75
     lon: -84.4
@@ -10,3 +11,6 @@
         self.start_getting_markets_in_fov()
     on_lon:
         self.start_getting_markets_in_fov()
+    GpsBlinker:
+        
+        id: blinker
