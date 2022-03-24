@@ -17,6 +17,9 @@ class GpsHelper():
                     print('Permission granted')
                 else:
                     print("Did not get all permissions")
+
+            request_permission([Permission.ACCESS_COARSE_LOCATION, Permission.ACCESS_FINE_LOCATION], callback)
+            
         # Configure GPS
         if platform == 'android' or platform == 'ios':
             from plyer import gps
