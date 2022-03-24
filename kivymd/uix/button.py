@@ -867,7 +867,7 @@ class BaseRectangularButton(RectangularRippleBehavior, BaseButton):
     as stated in guidelines.
     """
 
-    width = BoundedNumericProperty(
+    width = NumericProperty(
         dp(88), min=dp(88), max=None, errorhandler=lambda x: dp(88)
     )
     text = StringProperty("")
