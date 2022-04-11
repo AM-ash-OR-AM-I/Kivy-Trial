@@ -1,21 +1,20 @@
-"""
-Color Definitions
-=====
+from kivy.properties import get_color_from_hex
 
-Copyright (c) 2015 Andrés Rodríguez and KivyMD contributors -
-    KivyMD library up to version 0.1.2
-Copyright (c) 2019 Ivanov Yuri and KivyMD contributors -
-    KivyMD library version 0.1.3 and higher
+'''
+Method to create light colors...
 
-For suggestions and questions:
-<kivydevelopment@gmail.com>
+dict={}
+    col = get_color_from_hex('FF004C')
+    col1=get_color_from_hex('296DFF')
+    col2=get_color_from_hex('A200FF')
+    col3 = get_color_from_hex('FF5722')
+    col[3],col1[3],col[3],col3[3] = 0.2,0.3,0.3,0.3
+    dict['Pink'],dict['Blue'],dict['DeepPurple'],dict['DeepOrange']=col,col1,col2,col3
+    
+'''
 
-This file is distributed under the terms of the same license,
-as the Kivy framework.
-
-`Material Design spec, The color system <https://material.io/design/color/the-color-system.html>`_
-"""
-
+dark_colors={'Pink': [0.6313725490196078, 0.00784313725490196, 0.19215686274509805, 1.0], 'DeepPurple': [0.3607843137254902, 0.0, 0.5686274509803921, 1.0], 'Blue': [0.10980392156862745, 0.27058823529411763, 0.6196078431372549, 1.0], 'DeepOrange': [0.6784313725490196, 0.23921568627450981, 0.10196078431372549, 1.0]}
+custom_light_color={'Red': [0.9568627450980393, 0.2627450980392157, 0.21176470588235294, 0.25], 'Pink': [1.0, 0.0, 0.2980392156862745, 0.25], 'Purple': [0.611764705882353, 0.15294117647058825, 0.6901960784313725, 0.25], 'DeepPurple': [0.6352941176470588, 0.0, 1.0, 0.25], 'Indigo': [0.24705882352941178, 0.3176470588235294, 0.7098039215686275, 0.25], 'Blue': [0.1607843137254902, 0.42745098039215684, 1.0, 0.25], 'LightBlue': [0.011764705882352941, 0.6627450980392157, 0.9568627450980393, 0.25], 'Cyan': [0.0, 0.9215686274509803, 0.8901960784313725, 0.25], 'Teal': [0.0, 0.5882352941176471, 0.5333333333333333, 0.25], 'Green': [0.2980392156862745, 0.6862745098039216, 0.3137254901960784, 0.25], 'LightGreen': [0.5450980392156862, 0.7647058823529411, 0.2901960784313726, 0.25], 'Lime': [0.803921568627451, 0.8627450980392157, 0.2235294117647059, 0.25], 'Yellow': [1.0, 0.9215686274509803, 0.23137254901960785, 0.25], 'Amber': [1.0, 0.7568627450980392, 0.027450980392156862, 0.25], 'Orange': [1.0, 0.596078431372549, 0.0, 0.25], 'DeepOrange': [1.0, 0.3411764705882353, 0.13333333333333333, 0.25], 'Brown': [0.4745098039215686, 0.3333333333333333, 0.2823529411764706, 0.25], 'Gray': [0.6196078431372549, 0.6196078431372549, 0.6196078431372549, 0.25], 'BlueGray': [0.3764705882352941, 0.49019607843137253, 0.5450980392156862, 0.25]}
 colors = {
     "Red": {
         "50": "FFEBEE",
@@ -52,17 +51,18 @@ colors = {
     "Purple": {
         "50": "F3E5F5",
         "100": "E1BEE7",
-        "200": "CE93D8",
-        "300": "BA68C8",
-        "400": "AB47BC",
-        "500": "9C27B0",
-        "600": "8E24AA",
-        "700": "7B1FA2",
-        "800": "6A1B9A",
+        "200": "b0a1ff",
+        "300": "A594FF",
+        "400": "b0a1ff",
+        "500": "5433FE",
+        "600": "4E34D8",
+        "700": "4E34D8",
+        "800": "4E34D8",
         "900": "4A148C",
         "A100": "EA80FC",
         "A200": "E040FB",
-        "A400": "D500F9FF",
+        "A400": "D500F9",
+        "A700": "AA00FF",
     },
     "DeepPurple": {
         "50": "EDE7F6",
@@ -70,7 +70,7 @@ colors = {
         "200": "B39DDB",
         "300": "9575CD",
         "400": "7E57C2",
-        "500": "673AB7",
+        "500": "6200EA",
         "600": "5E35B1",
         "700": "512DA8",
         "800": "4527A0",
@@ -102,7 +102,7 @@ colors = {
         "200": "90CAF9",
         "300": "64B5F6",
         "400": "42A5F5",
-        "500": "2196F3",
+        "500": "2962FF",
         "600": "1E88E5",
         "700": "1976D2",
         "800": "1565C0",
@@ -134,7 +134,7 @@ colors = {
         "200": "80DEEA",
         "300": "4DD0E1",
         "400": "26C6DA",
-        "500": "00BCD4",
+        "500": "00D8D4",
         "600": "00ACC1",
         "700": "0097A7",
         "800": "00838F",
@@ -150,7 +150,7 @@ colors = {
         "200": "80CBC4",
         "300": "4DB6AC",
         "400": "26A69A",
-        "500": "009688",
+        "500": "00BFA5",
         "600": "00897B",
         "700": "00796B",
         "800": "00695C",
@@ -166,7 +166,7 @@ colors = {
         "200": "A5D6A7",
         "300": "81C784",
         "400": "66BB6A",
-        "500": "4CAF50",
+        "500": "00C853",
         "600": "43A047",
         "700": "388E3C",
         "800": "2E7D32",
@@ -260,9 +260,9 @@ colors = {
         "50": "FBE9E7",
         "100": "FFCCBC",
         "200": "FFAB91",
-        "300": "FF8A65",
+        "300": "ff8d69",
         "400": "FF7043",
-        "500": "FF5722",
+        "500": "ff7a4f",
         "600": "F4511E",
         "700": "E64A19",
         "800": "D84315",
@@ -322,19 +322,122 @@ colors = {
     },
     "Light": {
         "StatusBar": "E0E0E0",
-        "AppBar": "F5F5F5",
+        "AppBar": "FFFFFF",
         "Background": "FAFAFA",
         "CardsDialogs": "FFFFFF",
         "FlatButtonDown": "cccccc",
     },
     "Dark": {
         "StatusBar": "000000",
-        "AppBar": "212121",
-        "Background": "303030",
-        "CardsDialogs": "424242",
+        "AppBar": "262626",
+        "Background": "161616",
+        "CardsDialogs": "262626",
         "FlatButtonDown": "999999",
     },
 }
+"""Color palette. Taken from `2014 Material Design color palettes
+<https://material.io/design/color/the-color-system.html>`_.
+
+To demonstrate the shades of the palette, you can run the following code:
+
+.. code-block:: python
+
+    from kivy.lang import Builder
+    from kivy.uix.boxlayout import BoxLayout
+    from kivy.utils import get_color_from_hex
+    from kivy.properties import ListProperty, StringProperty
+
+    from kivymd.color_definitions import colors
+    from kivymd.uix.tab import MDTabsBase
+
+    demo = '''
+    <Root@BoxLayout>
+        orientation: 'vertical'
+
+        MDToolbar:
+            title: app.title
+
+        MDTabs:
+            id: android_tabs
+            on_tab_switch: app.on_tab_switch(*args)
+            size_hint_y: None
+            height: "48dp"
+            tab_indicator_anim: False
+
+        ScrollView:
+
+            MDList:
+                id: box
+
+
+    <ItemColor>:
+        size_hint_y: None
+        height: "42dp"
+
+        canvas:
+            Color:
+                rgba: root.color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+        MDLabel:
+            text: root.text
+            halign: "center"
+
+
+    <Tab>:
+    '''
+
+    from kivy.factory import Factory
+    from kivymd.app import MDApp
+
+
+    class Tab(BoxLayout, MDTabsBase):
+        pass
+
+
+    class ItemColor(BoxLayout):
+        text = StringProperty()
+        color = ListProperty()
+
+
+    class Palette(MDApp):
+        title = "Colors definitions"
+
+        def build(self):
+            Builder.load_string(demo)
+            self.screen = Factory.Root()
+
+            for name_tab in colors.keys():
+                tab = Tab(text=name_tab)
+                self.screen.ids.android_tabs.add_widget(tab)
+            return self.screen
+
+        def on_tab_switch(self, instance_tabs, instance_tab, instance_tabs_label, tab_text):
+            self.screen.ids.box.clear_widgets()
+            for value_color in colors[tab_text]:
+                self.screen.ids.box.add_widget(
+                    ItemColor(
+                        color=get_color_from_hex(colors[tab_text][value_color]),
+                        text=value_color,
+                    )
+                )
+
+        def on_start(self):
+            self.on_tab_switch(
+                None,
+                None,
+                None,
+                self.screen.ids.android_tabs.ids.layout.children[-1].text,
+            )
+
+
+    Palette().run()
+
+.. image:: https://github.com/HeaTTheatR/KivyMD-data/raw/master/gallery/kivymddoc/palette.gif
+    :align: center
+"""
 
 palette = [
     "Red",
@@ -357,6 +460,8 @@ palette = [
     "Gray",
     "BlueGray",
 ]
+"""Valid values for color palette selecting."""
+
 hue = [
     "50",
     "100",
@@ -373,6 +478,7 @@ hue = [
     "A400",
     "A700",
 ]
+"""Valid values for color hue selecting."""
 
 
 light_colors = {
@@ -495,23 +601,13 @@ light_colors = {
     ],
     "DeepOrange": ["50", "100", "200", "300", "400", "A100", "A200"],
     "Brown": ["50", "100", "200"],
-    "Gray": ["51", "100", "200", "300", "400", "500"],
+    "Gray": ["50", "100", "200", "300", "400", "500"],
     "BlueGray": ["50", "100", "200", "300"],
     "Dark": [],
     "Light": ["White", "MainBackground", "DialogBackground"],
 }
+"""Which colors are light. Other are dark."""
 
-"""
-# How to generate text_colors dict:
-text_colors = {}
-for p in palette:
-    text_colors[p] = {}
-    for h in hue:
-        if h in light_colors[p]:
-            text_colors[p][h] = '000000'
-        else:
-            text_colors[p][h] = 'FFFFFF'
-"""
 text_colors = {
     "Red": {
         "50": "000000",
@@ -818,6 +914,22 @@ text_colors = {
         "A700": "FFFFFF",
     },
 }
+"""Text colors generated from :data:`~light_colors`. "000000" for light and
+"FFFFFF" for dark.
+
+How to generate text_colors dict
+
+.. code-block:: python
+
+   text_colors = {}
+   for p in palette:
+       text_colors[p] = {}
+       for h in hue:
+           if h in light_colors[p]:
+               text_colors[p][h] = "000000"
+           else:
+               text_colors[p][h] = "FFFFFF"
+"""
 
 theme_colors = [
     "Primary",
@@ -831,3 +943,5 @@ theme_colors = [
     "On_Surface",
     "On_Error",
 ]
+"""Valid theme colors."""
+

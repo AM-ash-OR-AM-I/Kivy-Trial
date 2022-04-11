@@ -11,7 +11,7 @@ application :
 
 from kivy.clock import Clock
 from kivy.lang import Builder
-from kivy.properties import StringProperty, NumericProperty
+from kivy.properties import NumericProperty, StringProperty
 from kivy.uix.label import Label
 
 Builder.load_string(
@@ -24,7 +24,7 @@ Builder.load_string(
 
     canvas.before:
         Color:
-            rgba: app.theme_cls.primary_dark
+            rgba: [0,0,0,0]
         Rectangle:
             pos: self.pos
             size: self.size
